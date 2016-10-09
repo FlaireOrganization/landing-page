@@ -7,6 +7,9 @@ h5 {
 }
 
 h5.subtitle {
+	margin-top: 70px;
+	text-transform: uppercase;
+	font-size: 2.5em;
 	font-weight: 700;
 }
 
@@ -18,26 +21,34 @@ span {
 	font-family: 'Domine', serif;
 }
 
-
 /* Jagged Traingular Header */
 section.heading {
 	background: url('/images/girl.jpg');
 	background-size: 100% auto;
 	width: 100%;
 	color:white;
-	overflow: show;
+	overflow: all;
 }
 
 .title {
 	font-family: 'Domine', serif;
 	font-size: 4em;
-	width: 25%;
+	width: 900px;
 	color: red;
 	background-color: white;
+	text-align: center;
 }
 
 .dark-overlay {
 	height: 600px;
 	background-color: black;
 	opacity: 0.5;
+}
+
+.slogan {
+	margin-left: 15%;
+}
+
+#heading-text { 
+	display: block;
 }
