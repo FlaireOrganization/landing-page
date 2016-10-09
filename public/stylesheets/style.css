@@ -4,7 +4,6 @@ body {
 
 h5 {
 	font-family: 'Josefin Sans', sans-serif;
-	text-transform: uppercase;
 }
 
 h5.subtitle {
@@ -15,3 +14,30 @@ h1 {
 	font-family: 'Signika', sans-serif;
 }
 
+span {
+	font-family: 'Domine', serif;
+}
+
+
+/* Jagged Traingular Header */
+section.heading {
+	background: url('/images/girl.jpg');
+	background-size: 100% auto;
+	width: 100%;
+	color:white;
+	overflow: show;
+}
+
+.title {
+	font-family: 'Domine', serif;
+	font-size: 4em;
+	width: 25%;
+	color: red;
+	background-color: white;
+}
+
+.dark-overlay {
+	height: 600px;
+	background-color: black;
+	opacity: 0.5;
+}
