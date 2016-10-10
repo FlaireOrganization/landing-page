@@ -23,14 +23,24 @@
 	<h1 class="center red-text">Flaire</h1>	
 
 	<section class="heading">
-		<div id="heading-text" class=" valign-wrapper dark-overlay">
+		<div id="heading-text" class="valign-wrapper dark-overlay">
 			<div class="title-text">
 				<h5 class="header col s12 title slogan valign">Beauty services and clients at your finger tips!</h5>
 				<p class="col s12 slogan valign">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a sollicitudin augue. Phasellus non ullamcorper risus, vitae tempus nisi. Donec.
 				</p>
 			</div>
-			<div class="form-section"></div>
+			<div class="form-section">
+				<form method="POST"action="/subscribe">
+					<label for="name">Full Name</label>
+					<input type="text" name="name" id="name" required="required">
+					<label for="email">E-Mail</label>
+					<input type="email" name="email" id="email" required>
+					<label for="comments">Comments</label>
+					<textarea name="comments" id="comments" cols="20" rows="2"></textarea>
+					<input type="submit" name="submit" id="submit" value="Submit">
+				</form>
+			</div>
 		</div>
 	</section>
 
