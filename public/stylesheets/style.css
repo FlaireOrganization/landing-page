@@ -84,11 +84,21 @@ form label {
 	margin-bottom: 11%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 701px) {
+	#mobile-only {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 700px) {
 
 	#picture-align div#heading-text {
 		margin-top: 1%;
 		margin-bottom: 1%;
+	}
+
+	div h5.title {
+		font-size: 30px;
 	}
 
 	form label {
@@ -98,7 +108,39 @@ form label {
 
 	form {
 		margin-bottom: 20px;
+		margin-top: 10px;
 		padding: 15px;
+		padding-left: 35px;
+		padding-right: 35px;
 	}
 
+	#desktop-only {
+		display: none;
+	}
+
+	#picture-align p {
+		font-size: 20px;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin: 0px;
+	}
+
+}
+
+@media screen and (max-width: 425px) {
+	#picture-align div#heading-text {
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+
+	#picture-align p {
+		font-size: 15px;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin: 0px;
+	}
+
+	div h5.title {
+		font-size: 22px;
+	}
 }
