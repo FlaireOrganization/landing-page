@@ -28,11 +28,30 @@
 			<div id="heading-text" class="title-text">
 				<h5 class="header col s12 title slogan valign">Beauty services and clients at your finger tips!</h5>
 				<p class="col s12 slogan valign">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a sollicitudin augue. Phasellus non ullamcorper risus, vitae tempus nisi. Donec.
+					Flaire connects beauty professionals to clients seeking services near by. Sign up for beta release!
 				</p>
 			</div>			
 			
-			<div class="form-section col s12 m6">
+			<div class="form-section col s12 m6" id="desktop-only">
+				<form method="POST" action="/subscribe">
+					<label for="name">Full Name</label>
+					<input type="text" name="name" id="name" required="required">
+					<label for="email">E-Mail</label>
+					<input type="email" name="email" id="email" required>
+					<label for="comments">Are you a beauty professional?</label>
+					<input style="display:block;" type="radio" name="yes" value="true"> Yes<br>
+					<input style="display:block;" type="radio" name="no" value="false"> No<br>
+					<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+						<i class="material-icons right">send</i>
+					</button>
+				</form>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="heading" id="mobile-only">	
+			<div class="form-section">
 				<form method="POST" action="/subscribe">
 					<label for="name">Full Name</label>
 					<input type="text" name="name" id="name" required="required">
