@@ -9,6 +9,11 @@ router.get('/', function(req, res, next) {
   res.render('index');
 });
 
+/* GET method for thank you message */
+router.get('/thankyou', function(req, res, next) {
+  res.render('thankyou');
+});
+
 /* POST method for subscribing users */
 router.post('/subscribe', function(req, res) {
 	connection.query('USE ' + dbconfig.database);
