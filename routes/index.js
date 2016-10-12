@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-// var models  = require('../models');
 var mySQL = require('mysql');
 var dbconfig = require('../config/database');
 var connection = mySQL.createConnection(dbconfig.connection);
@@ -10,25 +9,32 @@ router.get('/', function(req, res, next) {
   res.render('index');
 });
 
+/* POST method for subscribing users */
 router.post('/subscribe', function(req, res) {
 	connection.query('USE ' + dbconfig.database);
+	
+	console.log(req.body)
+	const FALSE = 0;
+	const TRUE = 1;
+
 	var newUser = {
 		name: req.body.name,
 		email: req.body.email,
-		professional: req.body.professional
+		professional: FALSE
 	};
+
+	/* If there is a VALUE then set to TRUE */
+	if (req.body.yes){
+		newUser.professional = TRUE
+	};
+
+	console.log(newUser)
+
 	connection.query(
 		"INSERT INTO users SET ?", newUser, function(err, user){
-		console.log('------------------------')
 		console.log(user);
 		// res.redirect('/success');
 	})
-	console.log('****DONE****DONE****DONE*****DONE******DONE****DONE****DONE****DONE****')
-
-	// .then(function() {
-	// 	res.redirect('/success');
-	// 	console.log("Successfully created user")
-	// });
 });
 
 module.exports = router;
