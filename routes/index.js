@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
   res.render('index');
 });
 
-router.post('/create', function(req, res) {
+router.post('/subscribe', function(req, res) {
 	connection.query('USE ' + dbconfig.database);
 	var newUser = {
 		name: req.body.name,
