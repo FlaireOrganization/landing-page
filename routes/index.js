@@ -10,6 +10,10 @@ router.get('/', function(req, res, next) {
   res.render('index');
 });
 
+router.get('/thankyou', function(req, res, next) {
+  res.render('thankyou');
+});
+
 router.post('/subscribe', function(req, res) {
 	connection.query('USE ' + dbconfig.database);
 	var newUser = {
