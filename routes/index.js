@@ -29,7 +29,7 @@ router.post('/thankyou', function(req, res) {
 	};
 
 	/* If there is a VALUE then set to TRUE */
-	if (req.body.yes){
+	if (req.body.yes || req.body.professional=="value"){
 		newUser.professional = TRUE
 	};
 
@@ -38,9 +38,12 @@ router.post('/thankyou', function(req, res) {
 	connection.query(
 		"INSERT INTO users SET ?", newUser, function(err, user){
 		console.log(user);
-		// res.redirect('/success');
-	})
-	res.render('/thankyou')
+		// res.redirect('/thankyou');
+	}).then(
+		res.render('/thankyou'
+	)
+)
+
 });
 
 module.exports = router;

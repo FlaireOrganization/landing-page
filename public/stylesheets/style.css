@@ -148,3 +148,14 @@ form label {
 		font-size: 22px;
 	}
 }
+
+body#thank-you {
+	background-color: #DD1637;
+	color: #F8EAEA;
+}
+
+.thank-you-container {
+
+	position: absolute;
+	margin-top: 25%;
+}
