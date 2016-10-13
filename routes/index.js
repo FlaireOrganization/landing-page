@@ -10,12 +10,10 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET method for thank you message */
-router.get('/thankyou', function(req, res, next) {
-  res.render('thankyou');
-});
+
 
 /* POST method for subscribing users */
-router.post('/subscribe', function(req, res) {
+router.post('/thankyou', function(req, res) {
 	connection.query('USE ' + dbconfig.database);
 	
 	console.log(req.body)
@@ -40,6 +38,7 @@ router.post('/subscribe', function(req, res) {
 		console.log(user);
 		// res.redirect('/success');
 	})
+	res.render('/thankyou')
 });
 
 module.exports = router;
