@@ -10,7 +10,9 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET method for thank you message */
-
+router.get('/thankyou', function(req, res, next) {
+  res.render('thankyou');
+});
 
 /* POST method for subscribing users */
 router.post('/thankyou', function(req, res) {
@@ -27,7 +29,7 @@ router.post('/thankyou', function(req, res) {
 	};
 
 	/* If there is a VALUE then set to TRUE */
-	if (req.body.yes || req.body.professional=="value"){
+	if (req.body.yes){
 		newUser.professional = TRUE
 	};
 
@@ -36,12 +38,9 @@ router.post('/thankyou', function(req, res) {
 	connection.query(
 		"INSERT INTO users SET ?", newUser, function(err, user){
 		console.log(user);
-		// res.redirect('/thankyou');
-	}).then(
-		res.render('/thankyou'
-	)
-)
-
+		// res.redirect('/success');
+	})
+	res.render('/thankyou')
 });
 
 module.exports = router;
