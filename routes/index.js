@@ -10,7 +10,9 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET method for thank you message */
-
+router.get('/thankyou', function(req, res, next) {
+  res.render('thankyou');
+});
 
 /* POST method for subscribing users */
 router.post('/thankyou', function(req, res) {
